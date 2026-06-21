@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stacks Proof Pad</title>
+    <meta name="description" content="A tiny proof-of-build project for Stacks Builder Rewards.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero" aria-labelledby="title">
+        <div class="hero-copy">
+          <p class="mark">Stacks Builder Rewards Sprint</p>
+          <h1 id="title">Proof Pad for builders who ship before the coffee cools.</h1>
+          <p class="lede">
+            Write a short build memo, preview the proof, and pair it with a minimal Stacks contract.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="#proof">Create proof</a>
+            <a class="button secondary" href="contracts/proof-pad.clar">View contract</a>
+          </div>
+        </div>
+
+        <div class="signal" aria-label="Animated stack visual">
+          <span style="--i: 1"></span>
+          <span style="--i: 2"></span>
+          <span style="--i: 3"></span>
+          <span style="--i: 4"></span>
+          <span style="--i: 5"></span>
+        </div>
+      </section>
+
+      <section id="proof" class="workspace" aria-label="Proof generator">
+        <form class="panel" id="proof-form">
+          <label>
+            Builder name
+            <input id="builder" name="builder" maxlength="36" placeholder="satoshi-stacker" required>
+          </label>
+          <label>
+            What did you build?
+            <textarea id="memo" name="memo" maxlength="120" rows="4" placeholder="I shipped a tiny proof app and a Clarity contract." required></textarea>
+          </label>
+          <button class="button primary" type="submit">Generate local proof</button>
+        </form>
+
+        <article class="receipt" aria-live="polite">
+          <p class="receipt-label">Proof preview</p>
+          <h2 id="receipt-builder">Builder pending</h2>
+          <p id="receipt-memo">Submit the form to generate a reviewable proof card.</p>
+          <dl>
+            <div>
+              <dt>Contract</dt>
+              <dd>proof-pad.clar</dd>
+            </div>
+            <div>
+              <dt>Network</dt>
+              <dd>Stacks</dd>
+            </div>
+            <div>
+              <dt>Timestamp</dt>
+              <dd id="receipt-time">Not generated</dd>
+            </div>
+          </dl>
+        </article>
+      </section>
+
+      <section class="runbook" aria-label="Submission runbook">
+        <h2>Submission runbook</h2>
+        <ol>
+          <li>Deploy this static site on a free host.</li>
+          <li>Verify the website in Talent App.</li>
+          <li>Deploy the Clarity contract and add its address to the project.</li>
+        </ol>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

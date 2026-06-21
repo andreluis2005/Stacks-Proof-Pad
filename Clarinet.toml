@@ -1,0 +1,12 @@
+[project]
+name = 'stacks-proof-pad'
+description = 'Tiny proof-of-build contract for Stacks Builder Rewards'
+authors = []
+telemetry = false
+cache_dir = './.cache'
+requirements = []
+
+[contracts.proof-pad]
+path = 'contracts/proof-pad.clar'
+clarity_version = 3
+epoch = 3.0
