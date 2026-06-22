@@ -3,8 +3,7 @@
 (define-map proofs
   { builder: principal }
   {
-    memo: (string-ascii 120),
-    block: uint
+    memo: (string-ascii 120)
   }
 )
 
@@ -14,8 +13,7 @@
     (map-set proofs
       { builder: tx-sender }
       {
-        memo: memo,
-        block: block-height
+        memo: memo
       }
     )
     (ok (var-get proof-count))
