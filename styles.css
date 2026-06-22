@@ -157,7 +157,8 @@ label {
 }
 
 input,
-textarea {
+textarea,
+select {
   width: 100%;
   border: 1px solid var(--ink);
   background: color-mix(in oklch, var(--paper), var(--amber) 10%);
@@ -205,6 +206,23 @@ dd {
 
 .runbook h2 {
   font-size: clamp(1.8rem, 4vw, 3.2rem);
+}
+
+.deploy-shell {
+  padding-top: clamp(24px, 4vw, 48px);
+}
+
+.deploy-hero {
+  padding: clamp(12px, 4vw, 44px) 0;
+}
+
+.deploy-hero h1 {
+  max-width: 12ch;
+  font-size: clamp(3rem, 9vw, 7rem);
+}
+
+.deploy-workspace {
+  margin-top: 12px;
 }
 
 ol {

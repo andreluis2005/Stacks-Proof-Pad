@@ -21,6 +21,7 @@ Do not copy a random GitHub project. A fresh static site plus a tiny original co
 - `index.html`: public site and demo.
 - `styles.css`: responsive UI.
 - `app.js`: local proof preview.
+- `deploy.html` and `deploy.js`: wallet-assisted Stacks contract deploy flow.
 - `contracts/proof-pad.clar`: minimal Clarity contract.
 - `Clarinet.toml`: contract project metadata.
 - `docs/mcp-setup.md`: MCP setup plan for GitHub, Vercel, and Stacks workflow.

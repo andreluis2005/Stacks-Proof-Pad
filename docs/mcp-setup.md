@@ -77,10 +77,10 @@ For this project, Vercel does not need to install dependencies because the site 
 
 Fastest free contract workflow:
 
-1. Install Clarinet locally when ready.
-2. Run `clarinet check`.
-3. Deploy on Stacks testnet first.
-4. Use mainnet only if the Talent campaign requires a mainnet contract.
+1. Open `/deploy.html` on the deployed website.
+2. Connect Xverse on testnet.
+3. Deploy `proof-pad`.
+4. Repeat on mainnet only when ready for the Talent campaign.
 
 The campaign page says to add a Stacks smart contract to the verified project, but the public page does not specify whether testnet is enough. Confirm this in Talent before spending mainnet STX.
 

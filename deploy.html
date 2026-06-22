@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Deploy Proof Pad</title>
+    <meta name="description" content="Deploy the Stacks Proof Pad contract with a wallet.">
+    <meta name="talentapp:project_verification" content="dad3dec46ff741e3cb3d0c0180be4a38a5909b1f583f96e6806cd6dd189ebf196848fb795ae3411f0d89a94232a3a9cac6823ddf4675ba05c3aea4eaf226e40c">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell deploy-shell">
+      <section class="deploy-hero" aria-labelledby="title">
+        <p class="mark">Stacks Proof Pad</p>
+        <h1 id="title">Deploy the contract with Xverse.</h1>
+        <p class="lede">
+          Start on testnet, confirm the wallet prompt, then use the resulting contract id as the rehearsal address.
+        </p>
+      </section>
+
+      <section class="workspace deploy-workspace" aria-label="Contract deployment">
+        <form class="panel" id="deploy-form">
+          <label>
+            Network
+            <select id="network" name="network">
+              <option value="testnet" selected>Testnet</option>
+              <option value="mainnet">Mainnet</option>
+            </select>
+          </label>
+          <label>
+            Contract name
+            <input id="contract-name" name="contract-name" value="proof-pad" readonly>
+          </label>
+          <label>
+            Wallet address after connect
+            <input id="wallet-address" name="wallet-address" placeholder="ST... for testnet, SP... for mainnet">
+          </label>
+          <button class="button secondary" type="button" id="connect-wallet">Connect Xverse</button>
+          <button class="button primary" type="submit">Deploy contract</button>
+        </form>
+
+        <article class="receipt">
+          <p class="receipt-label">Deploy status</p>
+          <h2 id="deploy-title">Ready</h2>
+          <p id="deploy-message">Use testnet first. Xverse must sign and broadcast the transaction.</p>
+          <dl>
+            <div>
+              <dt>Contract id</dt>
+              <dd id="contract-id">Pending</dd>
+            </div>
+            <div>
+              <dt>Transaction</dt>
+              <dd id="tx-link">Pending</dd>
+            </div>
+            <div>
+              <dt>Explorer</dt>
+              <dd id="explorer-link">Pending</dd>
+            </div>
+          </dl>
+        </article>
+      </section>
+
+      <section class="runbook" aria-label="Deployment notes">
+        <h2>Use this safely</h2>
+        <ol>
+          <li>Deploy on testnet first and wait for the transaction to confirm.</li>
+          <li>When ready for the campaign, switch to mainnet and deploy the same contract.</li>
+          <li>Add the mainnet contract id in Talent under Data Sources, Smart contracts.</li>
+        </ol>
+      </section>
+    </main>
+    <script type="module" src="deploy.js"></script>
+  </body>
+</html>
